@@ -23,8 +23,10 @@ class Categories extends StatelessWidget {
             childAspectRatio: 4 / 2),
         children: categoryList
             .map((e) => CategoryCard(
-                  color: e.color,
-                  name: e.name,
+                  onPressed: () {
+                    debugPrint(e.id);
+                  },
+                  category: e,
                 ))
             .toList(),
       ),
